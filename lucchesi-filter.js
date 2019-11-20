@@ -1,8 +1,6 @@
 //SEARCH
-//$(".page-search").on("keyup", functionSearch());
-
-function functionSearch() {
-  var v = $(".page-search").val();                     // Nome dado ao valor desse filtro
+$(".page-search").on("keyup", function() {
+  var v = $(this).val();                     // Nome dado ao valor desse filtro
   $(".imovitem").each(function() {
     if (v == ""){                            // 'Se' o valor for nulo removerá suas classes
       $(this).removeClass("noresultsSrch");  
@@ -29,13 +27,11 @@ function functionSearch() {
         $(this).removeClass("resultsSrch"); } // E apagará sua classe de visibilidade
     }
   });
-}
+});
 
 //STATUS (SLC1)
-// $("#statusSlc").on("change", functionStatus());
-
-function functionStatus() {
-  var slc1 = $("#statusSlc").val();
+ $("#statusSlc").on("change", function() {
+  var slc1 = $(this).val();
   $(".imovitem").each(function() {
     if (slc1 == ""){
       $(this).removeClass("noresultsSlc");
@@ -62,13 +58,11 @@ function functionStatus() {
         $(this).removeClass("resultsSlc"); }
     } 
   });
-}
+});
 
 //NEGÓCIO (SLC2)
-// $("#negocioSlc").on("change", functionNegocio());
-
-function functionNegocio(){
-  var slc2 = $("#negocioSlc").val();
+$("#negocioSlc").on("change", function() {
+  var slc2 = $(this).val();
   $(".imovitem").each(function() {
     if (slc2 == ""){
       $(this).removeClass("noresultsSlc2");
@@ -95,13 +89,11 @@ function functionNegocio(){
         $(this).removeClass("resultsSlc2"); }
     }
   });
-}
+});
 
 //QUARTOS
-// $(".quartosNum").on("change", functionQuartos());
-
-function functionQuartos() {  
-  var qpreNum = $(".quartosNum").val();
+$(".quartosNum").on("change", function() {  
+  var qpreNum = $(this).val();
   if (qpreNum == 1) { 
     var qName = " quarto"}
   else {
@@ -133,13 +125,11 @@ function functionQuartos() {
         $(this).removeClass("resultsQuartos"); }
     }
   });
-}
+});
 
 //SUÍTES
-// $(".suitesNum").on("change", functionSuites());
-
-function functionSuites(){  
-  var spreNum = $(".suitesNum").val();
+$(".suitesNum").on("change", function() {  
+  var spreNum = $(this).val();
   if (spreNum == 1) { 
     var sName = " suíte"}
   else {
@@ -171,18 +161,16 @@ function functionSuites(){
         $(this).removeClass("resultsSuites"); }
     }
   });
-}
+});
 
 // VAGAS
-// $(".vagasNum").on("change", functionVagas());
-
-function functionVagas() {
-  var vpreNum = $(".vagasNum").val();
+$(".vagasNum").on("change", function() {
+  var vpreNum = $(this).val();
   if (vpreNum == 1) { 
     var vName = " vaga"}
   else {
     var vName = " vagas"}
-  var vNum = spreNum.toString() + vName;
+  var vNum = vpreNum.toString() + vName;
   $(".imovitem").each(function() {
     if (vNum == vName){
       $(this).removeClass("noresultsVagas");
@@ -209,7 +197,7 @@ function functionVagas() {
         $(this).removeClass("resultsVagas"); }
     }
   });
-}
+});
 
 //
 /* RANGE SLIDER
