@@ -1,4 +1,3 @@
-<script>
 //SEARCH
 //$(".page-search").on("keyup", functionSearch());
 
@@ -242,4 +241,3 @@ $(".slider").on("change", function() {
 });
         */
 //
-</script> 
