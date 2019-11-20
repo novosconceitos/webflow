@@ -2,7 +2,7 @@
 //$(".page-search").on("keyup", functionSearch());
 
 function functionSearch() {
-  var v = $(this).val();                     // Nome dado ao valor desse filtro
+  var v = $(".page-search").val();                     // Nome dado ao valor desse filtro
   $(".imovitem").each(function() {
     if (v == ""){                            // 'Se' o valor for nulo removerá suas classes
       $(this).removeClass("noresultsSrch");  
@@ -35,7 +35,7 @@ function functionSearch() {
 // $("#statusSlc").on("change", functionStatus());
 
 function functionStatus() {
-  var slc1 = $(this).val();
+  var slc1 = $("#statusSlc").val();
   $(".imovitem").each(function() {
     if (slc1 == ""){
       $(this).removeClass("noresultsSlc");
@@ -68,7 +68,7 @@ function functionStatus() {
 // $("#negocioSlc").on("change", functionNegocio());
 
 function functionNegocio(){
-  var slc2 = $(this).val();
+  var slc2 = $("#negocioSlc").val();
   $(".imovitem").each(function() {
     if (slc2 == ""){
       $(this).removeClass("noresultsSlc2");
@@ -101,7 +101,7 @@ function functionNegocio(){
 // $(".quartosNum").on("change", functionQuartos());
 
 function functionQuartos() {  
-  var qpreNum = $(this).val();
+  var qpreNum = $(".quartosNum").val();
   if (qpreNum == 1) { 
     var qName = " quarto"}
   else {
@@ -139,7 +139,7 @@ function functionQuartos() {
 // $(".suitesNum").on("change", functionSuites());
 
 function functionSuites(){  
-  var spreNum = $(this).val();
+  var spreNum = $(".suitesNum").val();
   if (spreNum == 1) { 
     var sName = " suíte"}
   else {
@@ -177,7 +177,7 @@ function functionSuites(){
 // $(".vagasNum").on("change", functionVagas());
 
 function functionVagas() {
-  var vpreNum = $(this).val();
+  var vpreNum = $(".vagasNum").val();
   if (vpreNum == 1) { 
     var vName = " vaga"}
   else {
