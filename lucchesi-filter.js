@@ -96,8 +96,11 @@ $(".quartosNum").on("change", function() {
   var qpreNum = $(this).val();
   if (qpreNum == 1) { 
     var qName = " quarto"}
-  else {
+  else if (qpreNum >= 2) {
     var qName = " quartos"}
+  else {
+    qpreNum == "";
+  }
   var qNum = qpreNum.toString() + qName;
   $(".imovitem").each(function() {
     if (qNum == qName){
@@ -132,8 +135,11 @@ $(".suitesNum").on("change", function() {
   var spreNum = $(this).val();
   if (spreNum == 1) { 
     var sName = " suíte"}
-  else {
+  else if (spreNum >= 2) {
     var sName = " suítes"}
+  else {
+    spreNum == "";
+  }
   var sNum = spreNum.toString() + sName;
   $(".imovitem").each(function() {
     if (sNum == sName){
@@ -168,8 +174,11 @@ $(".vagasNum").on("change", function() {
   var vpreNum = $(this).val();
   if (vpreNum == 1) { 
     var vName = " vaga"}
-  else {
+  else if (vpreNum >= 2) {
     var vName = " vagas"}
+  else {
+    vpreNum == "";
+  }
   var vNum = vpreNum.toString() + vName;
   $(".imovitem").each(function() {
     if (vNum == vName){
