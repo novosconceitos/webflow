@@ -7,15 +7,28 @@ $(".page-search").on("keyup", function() {
       $(this).removeClass("resultsSrch");}
     if (v != "" && $(this).text().search(new RegExp(v, 'gi')) != -1) {  // 'Se'o valor der "match"
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-       if ($(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsSlc3") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsSuites") || $(this).hasClass("noresultsVagas") ) {} else { // E 'se' não houver outra classe atribuída  
+       if ($(this).hasClass("noresultsSlc") 
+       || $(this).hasClass("noresultsSlc2")
+       || $(this).hasClass("noresultsSldr") 
+       || $(this).hasClass("noresultsSlc3") 
+       || $(this).hasClass("noresultsQuartos") 
+       || $(this).hasClass("noresultsSuites") 
+       || $(this).hasClass("noresultsVagas") ) {} else { // E 'se' não houver outra classe atribuída  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
           $(this).addClass("resultsSrch"); // Então adicionará sua classe, permitindo a visibilidade
           $(this).removeClass("noresultsSrch"); }   // E removerá sua classe de invisibilidade
   } else if (v != "" && $(this).text().search(v) != 1) {  //Caso o valor não dê "match"
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsSlc3") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsSuites") || $(this).hasClass("resultsVagas") ) {  // E se houverem outras classes atribuídas
+      if ($(this).hasClass("resultsSlc") 
+      || $(this).hasClass("resultsSlc2")
+      || $(this).hasClass("resultsSldr") 
+      || $(this).hasClass("resultsSlc3") 
+      || $(this).hasClass("resultsQuartos") 
+      || $(this).hasClass("resultsSuites") 
+      || $(this).hasClass("resultsVagas") ) {  // E se houverem outras classes atribuídas
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).removeClass("resultsSrch");
+        $(this).removeClass("resultsSldr");
         $(this).removeClass("resultsSlc");
         $(this).removeClass("resultsSlc2");
         $(this).removeClass("resultsSlc3");
@@ -39,15 +52,28 @@ $(".page-search").on("keyup", function() {
       $(this).removeClass("resultsSlc");}
     if (slc1 != "" && $(this).text().search(new RegExp(slc1, 'gi')) != -1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsSlc3") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsSuites") || $(this).hasClass("noresultsVagas") ) {} else {   
+      if ($(this).hasClass("noresultsSrch") 
+      || $(this).hasClass("noresultsSlc2") 
+      || $(this).hasClass("noresultsSldr")
+      || $(this).hasClass("noresultsSlc3") 
+      || $(this).hasClass("noresultsQuartos") 
+      || $(this).hasClass("noresultsSuites") 
+      || $(this).hasClass("noresultsVagas") ) {} else {   
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsSlc");
         $(this).removeClass("noresultsSlc");}
   } else if (slc1 != "" && $(this).text().search(slc1) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsSlc3") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsSuites") || $(this).hasClass("resultsVagas") ) {
+      if ($(this).hasClass("resultsSrch") 
+      || $(this).hasClass("resultsSlc2")
+      || $(this).hasClass("resultsSldr") 
+      || $(this).hasClass("resultsSlc3") 
+      || $(this).hasClass("resultsQuartos") 
+      || $(this).hasClass("resultsSuites") 
+      || $(this).hasClass("resultsVagas") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).removeClass("resultsSrch");
+        $(this).removeClass("resultsSldr");
         $(this).removeClass("resultsSlc");
         $(this).removeClass("resultsSlc2");
         $(this).removeClass("resultsSlc3");
@@ -71,15 +97,28 @@ $("#negocioSlc").on("change", function() {
       $(this).removeClass("resultsSlc2");}
     if (slc2 != "" && $(this).text().search(new RegExp(slc2, 'gi')) != -1) {
       // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc3") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsSuites") || $(this).hasClass("noresultsVagas") ) {} else {  
+      if ($(this).hasClass("noresultsSrch") 
+      || $(this).hasClass("noresultsSlc") 
+      || $(this).hasClass("noresultsSldr")
+      || $(this).hasClass("noresultsSlc3") 
+      || $(this).hasClass("noresultsQuartos") 
+      || $(this).hasClass("noresultsSuites") 
+      || $(this).hasClass("noresultsVagas") ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsSlc2");
         $(this).removeClass("noresultsSlc2");}
   } else if (slc2 != "" && $(this).text().search(slc2) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc3") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsSuites") || $(this).hasClass("resultsVagas") ) {
+      if ($(this).hasClass("resultsSrch") 
+      || $(this).hasClass("resultsSlc")
+      || $(this).hasClass("resultsSldr") 
+      || $(this).hasClass("resultsSlc3") 
+      || $(this).hasClass("resultsQuartos") 
+      || $(this).hasClass("resultsSuites") 
+      || $(this).hasClass("resultsVagas") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).removeClass("resultsSrch");
+        $(this).removeClass("resultsSldr");
         $(this).removeClass("resultsSlc");
         $(this).removeClass("resultsSlc2");
         $(this).removeClass("resultsSlc3");
@@ -103,15 +142,28 @@ $("#tipoSlc").on("change", function() {
       $(this).removeClass("resultsSlc3");}
     if (slc3 != "" && $(this).text().search(new RegExp(slc3, 'gi')) != -1) {
       // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsSuites") || $(this).hasClass("noresultsVagas") ) {} else {  
+      if ($(this).hasClass("noresultsSrch") 
+      || $(this).hasClass("noresultsSlc") 
+      || $(this).hasClass("noresultsSldr")
+      || $(this).hasClass("noresultsSlc2") 
+      || $(this).hasClass("noresultsQuartos") 
+      || $(this).hasClass("noresultsSuites") 
+      || $(this).hasClass("noresultsVagas") ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsSlc3");
         $(this).removeClass("noresultsSlc3");}
   } else if (slc3 != "" && $(this).text().search(slc3) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsSuites") || $(this).hasClass("resultsVagas") ) {
+      if ($(this).hasClass("resultsSrch") 
+      || $(this).hasClass("resultsSlc")
+      || $(this).hasClass("resultsSldr") 
+      || $(this).hasClass("resultsSlc2") 
+      || $(this).hasClass("resultsQuartos") 
+      || $(this).hasClass("resultsSuites") 
+      || $(this).hasClass("resultsVagas") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).removeClass("resultsSrch");
+        $(this).removeClass("resultsSldr");
         $(this).removeClass("resultsSlc");
         $(this).removeClass("resultsSlc2");
         $(this).removeClass("resultsSlc3");
@@ -139,17 +191,35 @@ $(".quartosNum").on("keyup", function() {
       $(this).removeClass("noresultsQuartos");
       $(this).removeClass("resultsQuartos");}
     if (qNum != qName && $(this).text().search(new RegExp(qNum, 'gi')) != -1) {
+      
         // \/ \/ \/ \/ \/ \/ \/ \/ \/ 
-      if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsSlc3") || $(this).hasClass("noresultsSuites") || $(this).hasClass("noresultsVagas") ) {} else {  
+      if ($(this).hasClass("noresultsSrch") 
+      || $(this).hasClass("noresultsSlc") 
+      || $(this).hasClass("noresultsSldr")
+      || $(this).hasClass("noresultsSlc2") 
+      || $(this).hasClass("noresultsSlc3") 
+      || $(this).hasClass("noresultsSuites") 
+      || $(this).hasClass("noresultsVagas") ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
+
         $(this).addClass("resultsQuartos");
         $(this).removeClass("noresultsQuartos");}
   } else if (qNum != qName && $(this).text().search(qNum) != 1) {
+
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsSlc3") || $(this).hasClass("resultsSuites") || $(this).hasClass("resultsVagas") ) {
+      if ($(this).hasClass("resultsSrch")
+      || $(this).hasClass("resultsSldr") 
+      || $(this).hasClass("resultsSlc") 
+      || $(this).hasClass("resultsSlc2") 
+      || $(this).hasClass("resultsSlc3") 
+      || $(this).hasClass("resultsSuites") 
+      || $(this).hasClass("resultsVagas") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
+
         $(this).removeClass("resultsSrch");
+        $(this).removeClass("resultsSldr");
         $(this).removeClass("resultsSlc");
+        $(this).removeClass("resultsSldr")
         $(this).removeClass("resultsSlc2");
         $(this).removeClass("resultsSlc3");
         $(this).removeClass("resultsQuartos");
@@ -177,15 +247,28 @@ $(".suitesNum").on("keyup", function() {
       $(this).removeClass("resultsSuites");}
     if (sNum != sName && $(this).text().search(new RegExp(sNum, 'gi')) != -1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsSlc3") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsVagas") ) {} else {  
+      if ($(this).hasClass("noresultsSrch") 
+      || $(this).hasClass("noresultsSlc") 
+      || $(this).hasClass("noresultsSldr")
+      || $(this).hasClass("noresultsSlc2") 
+      || $(this).hasClass("noresultsSlc3") 
+      || $(this).hasClass("noresultsQuartos") 
+      || $(this).hasClass("noresultsVagas") ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsSuites");
         $(this).removeClass("noresultsSuites");}
   } else if (sNum != sName && $(this).text().search(sNum) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsSlc3") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsVagas") ) {
+      if ($(this).hasClass("resultsSrch")
+      || $(this).hasClass("resultsSldr") 
+      || $(this).hasClass("resultsSlc") 
+      || $(this).hasClass("resultsSlc2") 
+      || $(this).hasClass("resultsSlc3") 
+      || $(this).hasClass("resultsQuartos") 
+      || $(this).hasClass("resultsVagas") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).removeClass("resultsSrch");
+        $(this).removeClass("resultsSldr");
         $(this).removeClass("resultsSlc");
         $(this).removeClass("resultsSlc2");
         $(this).removeClass("resultsSlc3");
@@ -214,15 +297,28 @@ $(".vagasNum").on("keyup", function() {
       $(this).removeClass("resultsVagas");}
     if (vNum != vName && $(this).text().search(new RegExp(vNum, 'gi')) != -1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsSlc3") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsSuites") ) {} else {  
+      if ($(this).hasClass("noresultsSrch") 
+      || $(this).hasClass("noresultsSlc")
+      || $(this).hasClass("noresultsSldr") 
+      || $(this).hasClass("noresultsSlc2") 
+      || $(this).hasClass("noresultsSlc3") 
+      || $(this).hasClass("noresultsQuartos") 
+      || $(this).hasClass("noresultsSuites") ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsVagas");
         $(this).removeClass("noresultsVagas");}
   } else if (vNum != vName && $(this).text().search(vNum) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsSlc3") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsSuites") ) {
+      if ($(this).hasClass("resultsSrch")
+      || $(this).hasClass("resultsSldr") 
+      || $(this).hasClass("resultsSlc") 
+      || $(this).hasClass("resultsSlc2") 
+      || $(this).hasClass("resultsSlc3") 
+      || $(this).hasClass("resultsQuartos") 
+      || $(this).hasClass("resultsSuites") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).removeClass("resultsSrch");
+        $(this).removeClass("resultsSldr");
         $(this).removeClass("resultsSlc");
         $(this).removeClass("resultsSlc2");
         $(this).removeClass("resultsSlc3");
@@ -249,6 +345,7 @@ $("#clearButton").on("click", function() {
     $(this).removeClass("resultsQuartos");
     $(this).removeClass("resultsSuites");
     $(this).removeClass("resultsVagas");
+    $(this).removeClass("resultsSldr");
     $(this).removeClass("noresultsSrch");
     $(this).removeClass("noresultsSlc");
     $(this).removeClass("noresultsSlc2");
@@ -256,6 +353,7 @@ $("#clearButton").on("click", function() {
     $(this).removeClass("noresultsQuartos");
     $(this).removeClass("noresultsSuites");
     $(this).removeClass("noresultsVagas");
+    $(this).removeClass("noresultsSldr");
   });
   $(".page-search").val("")
   $("#statusSlc").val("")
@@ -264,64 +362,58 @@ $("#clearButton").on("click", function() {
   $(".quartosNum").val("")
   $(".suitesNum").val("")
   $(".vagasNum").val("")
-});
-
-//CLEAR QUARTOS
-$("#clearQ").on("click", function() {
-  $(".imovitem").each(function() {
-    $(this).removeClass("resultsQuartos");
-    $(this).removeClass("noresultsQuartos");
-  });
-  $(".quartosNum").val("")
-});
-
-//CLEAR SUÍTES
-$("#clearS").on("click", function() {
-  $(".imovitem").each(function() {
-    $(this).removeClass("resultsSuites");
-    $(this).removeClass("noresultsSuites");
-  });
-  $(".suitesNum").val("")
-});
-
-//CLEAR VAGAS
-$("#clearV").on("click", function() {
-  $(".imovitem").each(function() {
-    $(this).removeClass("resultsVagas");
-    $(this).removeClass("noresultsVagas");
-  });
-  $(".vagasNum").val("")
+  $("#minRange").val("0")
+  $("#maxRange").val("10000000")
 });
 
 /////////////////////////////////////////////
 
 
-/* RANGE SLIDER
+// RANGE SLIDER
 $(".slider").on("change", function() {
   var minValue = Number($("#minRange").val());
   var maxValue = Number($("#maxRange").val());
   document.getElementById("maxvalueShow").innerHTML = maxValue;
   document.getElementById("minvalueShow").innerHTML = minValue;
-  console.log(minValue + " " + maxValue);
-  $(".imovitem").each(function() {
-    var priceImov = Number($(".divpriceH").text());
-    if (priceImov > minValue && priceImov < maxValue) {
-      if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsQuartos")) {} else {  
-        $(this).addClass("resultsSldr");
-        $(this).removeClass("noresultsSldr");}
+  console.log(minValue + " | " + maxValue);
+  $(".divpriceH").each(function() {
+    var priceImov = Number($(this).text());
+    if (priceImov >= minValue && priceImov <= maxValue) {
+        // \/ \/ \/ \/ \/ \/ \/ \/ \/
+      if ($(this).parent().parent().parent().parent().parent().hasClass("noresultsSrch") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc2") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc3") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsVagas")
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSuites")
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsQuartos") ) {} else { 
+        // /\ /\ /\ /\ /\ /\ /\ /\ /\ 
+        $(this).parent().parent().parent().parent().parent().addClass("resultsSldr");
+        $(this).parent().parent().parent().parent().parent().removeClass("noresultsSldr");}
   } else if (priceImov < minValue || priceImov > maxValue) {
-      if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsQuartos")) {
-        $(this).removeClass("resultsSrch");
-        $(this).removeClass("resultsSlc");
-        $(this).removeClass("resultsSlc2");
-        $(this).removeClass("resultsSldr");
-        $(this).removeClass("resultsQuartos");
-        $(this).addClass("noresultsSldr");
+            // \/ \/ \/ \/ \/ \/ \/ \/ \/
+      if ($(this).parent().parent().parent().parent().parent().hasClass("resultsSrch") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc2") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc3")
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsVagas")
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSuites")
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsQuartos")) {
+            // /\ /\ /\ /\ /\ /\ /\ /\ /\
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsSrch");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsSlc");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsSlc2");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsSlc3");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsSldr");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsQuartos");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsVagas");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsSuites");
+        $(this).parent().parent().parent().parent().parent().addClass("noresultsSldr");
     } else {
-        // $(this).addClass("noresultsSldr");
-        // $(this).removeClass("resultsSldr"); }
+        $(this).parent().parent().parent().parent().parent().addClass("noresultsSldr");
+        $(this).parent().parent().parent().parent().parent().removeClass("resultsSldr"); }
     }
   });
 });
-        */
+        
 //
