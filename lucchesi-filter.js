@@ -107,7 +107,7 @@ $("#tipoSlc").on("change", function() {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsSlc3");
         $(this).removeClass("noresultsSlc3");}
-  } else if (slc3 != "" && $(this).text().search(slc3) != 1) {
+  } else if (slc3 != "" && $(".tipoText").text().search(slc3) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
       if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsSuites") || $(this).hasClass("resultsVagas") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
