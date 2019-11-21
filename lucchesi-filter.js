@@ -101,13 +101,13 @@ $("#tipoSlc").on("change", function() {
     if (slc3 == ""){
       $(this).removeClass("noresultsSlc3");
       $(this).removeClass("resultsSlc3");}
-    if (slc3 != "" && $(".tipoText").text().search(new RegExp(slc3, 'gi')) != -1) {
+    if (slc3 != "" && $(this).text().search(new RegExp(slc3, 'gi')) != -1) {
       // \/ \/ \/ \/ \/ \/ \/ \/ \/
       if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsSuites") || $(this).hasClass("noresultsVagas") ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsSlc3");
         $(this).removeClass("noresultsSlc3");}
-  } else if (slc3 != "" && $(".tipoText").text().search(slc3) != 1) {
+  } else if (slc3 != "" && $(this).text().search(slc3) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
       if ($(this).hasClass("resultsSrch") || $(this).hasClass("resultsSlc") || $(this).hasClass("resultsSlc2") || $(this).hasClass("resultsQuartos") || $(this).hasClass("resultsSuites") || $(this).hasClass("resultsVagas") ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
@@ -131,7 +131,7 @@ $(".quartosNum").on("change", function() {
   var qpreNum = $(this).val();
   if (qpreNum == 1) { 
     var qName = " quarto";}
-  else if (qpreNum >= 2) {
+  else {
     var qName = " quartos";}
   var qNum = qpreNum.toString() + qName;
   $(".imovitem").each(function() {
@@ -168,7 +168,7 @@ $(".suitesNum").on("change", function() {
   var spreNum = $(this).val();
   if (spreNum == 1) { 
     var sName = " suíte";}
-  else if (spreNum >= 2) {
+  else {
     var sName = " suítes";}
   var sNum = spreNum.toString() + sName;
   $(".imovitem").each(function() {
@@ -205,7 +205,7 @@ $(".vagasNum").on("change", function() {
   var vpreNum = $(this).val();
   if (vpreNum == 1) { 
     var vName = " vaga";}
-  else if (vpreNum >= 2) {
+  else {
     var vName = " vagas";}
   var vNum = vpreNum.toString() + vName;
   $(".imovitem").each(function() {
