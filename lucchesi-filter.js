@@ -255,13 +255,13 @@ $("#clearButton").on("click", function() {
     $(this).removeClass("noresultsVagas");
     console.log("limpar");
   });
-  $(".page-search").val() = "";
-  $("#statusSlc").val() = "";
-  $("#negocioSlc").val() = "";
-  $("#negocioSlc").val() = "";
-  $(".quartosNum").val() = "";
-  $(".suitesNum").val() = "";
-  $(".vagasNum").val() = "";
+  $(".page-search").val("")
+  $("#statusSlc").val("")
+  $("#negocioSlc").val("")
+  $("#negocioSlc").val("")
+  $(".quartosNum").val("")
+  $(".suitesNum").val("")
+  $(".vagasNum").val("")
 });
 //
 /* RANGE SLIDER
