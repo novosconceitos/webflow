@@ -237,7 +237,7 @@ $(".vagasNum").on("change", function() {
   });
 });
 //
-$(".clearButton").on("click", function(){
+$("#clearButton").on("click", function() {
   $(".imovitem").each(function() {
     $(this).removeClass("resultsSrch");
     $(this).removeClass("resultsSlc");
@@ -253,14 +253,15 @@ $(".clearButton").on("click", function(){
     $(this).removeClass("noresultsQuartos");
     $(this).removeClass("noresultsSuites");
     $(this).removeClass("noresultsVagas");
+    console.log("limpar");
   });
-  $(".page-search").val() == "";
-  $("#statusSlc").val() == "";
-  $("#negocioSlc").val() == "";
-  $("#negocioSlc").val() == "";
-  $(".quartosNum").val() == "";
-  $(".suitesNum").val() == "";
-  $(".vagasNum").val() == "";
+  $(".page-search").val() = "";
+  $("#statusSlc").val() = "";
+  $("#negocioSlc").val() = "";
+  $("#negocioSlc").val() = "";
+  $(".quartosNum").val() = "";
+  $(".suitesNum").val() = "";
+  $(".vagasNum").val() = "";
 });
 //
 /* RANGE SLIDER
