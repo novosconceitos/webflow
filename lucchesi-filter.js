@@ -127,7 +127,7 @@ $("#tipoSlc").on("change", function() {
 });
 
 //QUARTOS
-$(".quartosNum").on("change", function() {  
+$(".quartosNum").on("keyup", function() {  
   var qpreNum = $(this).val();
   if (qpreNum == 1) { 
     var qName = " quarto";}
@@ -164,7 +164,7 @@ $(".quartosNum").on("change", function() {
 });
 
 //SUÍTES
-$(".suitesNum").on("change", function() {  
+$(".suitesNum").on("keyup", function() {  
   var spreNum = $(this).val();
   if (spreNum == 1) { 
     var sName = " suíte";}
@@ -201,7 +201,7 @@ $(".suitesNum").on("change", function() {
 });
 
 // VAGAS
-$(".vagasNum").on("change", function() {
+$(".vagasNum").on("keyup", function() {
   var vpreNum = $(this).val();
   if (vpreNum == 1) { 
     var vName = " vaga";}
