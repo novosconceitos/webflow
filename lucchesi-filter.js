@@ -364,6 +364,8 @@ $("#clearButton").on("click", function() {
   $(".vagasNum").val("")
   $("#minRange").val("0")
   $("#maxRange").val("10000000")
+  document.getElementById("maxvalueShow").innerHTML = "10000000";
+  document.getElementById("minvalueShow").innerHTML = "0";
 });
 
 /////////////////////////////////////////////
