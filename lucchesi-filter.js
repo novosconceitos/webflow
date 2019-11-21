@@ -101,7 +101,7 @@ $("#tipoSlc").on("change", function() {
     if (slc3 == ""){
       $(this).removeClass("noresultsSlc3");
       $(this).removeClass("resultsSlc3");}
-    if (slc3 != "" && $(this).text().search(new RegExp(slc3, 'gi')) != -1) {
+    if (slc3 != "" && $(".tipoText").text().search(new RegExp(slc3, 'gi')) != -1) {
       // \/ \/ \/ \/ \/ \/ \/ \/ \/
       if ($(this).hasClass("noresultsSrch") || $(this).hasClass("noresultsSlc") || $(this).hasClass("noresultsSlc2") || $(this).hasClass("noresultsQuartos") || $(this).hasClass("noresultsSuites") || $(this).hasClass("noresultsVagas") ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
