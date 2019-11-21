@@ -236,7 +236,10 @@ $(".vagasNum").on("change", function() {
     }
   });
 });
-//
+/////////////////////////////////////////////
+
+
+//CLEAR FILTER
 $("#clearButton").on("click", function() {
   $(".imovitem").each(function() {
     $(this).removeClass("resultsSrch");
@@ -253,7 +256,6 @@ $("#clearButton").on("click", function() {
     $(this).removeClass("noresultsQuartos");
     $(this).removeClass("noresultsSuites");
     $(this).removeClass("noresultsVagas");
-    console.log("limpar");
   });
   $(".page-search").val("")
   $("#statusSlc").val("")
@@ -263,7 +265,37 @@ $("#clearButton").on("click", function() {
   $(".suitesNum").val("")
   $(".vagasNum").val("")
 });
-//
+
+//CLEAR QUARTOS
+$("#clearQ").on("click", function() {
+  $(".imovitem").each(function() {
+    $(this).removeClass("resultsQuartos");
+    $(this).removeClass("noresultsQuartos");
+  });
+  $(".quartosNum").val("")
+});
+
+//CLEAR SUÍTES
+$("#clearS").on("click", function() {
+  $(".imovitem").each(function() {
+    $(this).removeClass("resultsSuites");
+    $(this).removeClass("noresultsSuites");
+  });
+  $(".suitesNum").val("")
+});
+
+//CLEAR VAGAS
+$("#clearV").on("click", function() {
+  $(".imovitem").each(function() {
+    $(this).removeClass("resultsVagas");
+    $(this).removeClass("noresultsVagas");
+  });
+  $(".vagasNum").val("")
+});
+
+/////////////////////////////////////////////
+
+
 /* RANGE SLIDER
 $(".slider").on("change", function() {
   var minValue = Number($("#minRange").val());
