@@ -479,14 +479,14 @@ $("#clearButton").on("click", function() {
 
 //NADA ENCONTRADO
 function classTest(){
-  if ( $(".testeDivImov").hasClass(testeSrch) 
-    || $(".testeDivImov").hasClass(testeSlc) 
-    || $(".testeDivImov").hasClass(testeSlc2) 
-    || $(".testeDivImov").hasClass(testeSlc3) 
-    || $(".testeDivImov").hasClass(testeSldr) 
-    || $(".testeDivImov").hasClass(testeQ) 
-    || $(".testeDivImov").hasClass(testeV) 
-    || $(".testeDivImov").hasClass(testeS)) {
+  if ( $(".testeDivImov").hasClass("testeSrch") 
+    || $(".testeDivImov").hasClass("testeSlc") 
+    || $(".testeDivImov").hasClass("testeSlc2") 
+    || $(".testeDivImov").hasClass("testeSlc3") 
+    || $(".testeDivImov").hasClass("testeSldr") 
+    || $(".testeDivImov").hasClass("testeQ") 
+    || $(".testeDivImov").hasClass("testeV") 
+    || $(".testeDivImov").hasClass("testeS")) {
     $(".errorText").css("display", "none");
   }
   else {
