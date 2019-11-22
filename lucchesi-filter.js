@@ -383,7 +383,16 @@ $(".slider").on("change", function() {
     if (priceImov >= minValue && priceImov <= maxValue) {
 
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).parent().parent().parent().parent().parent().hasClass("noresultsSrch") || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc") || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc2") || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc3") || $(this).parent().parent().parent().parent().parent().hasClass("noresultsVagas") || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSuites") || $(this).parent().parent().parent().parent().parent().hasClass("noresultsQuartos") ) {} else { 
+      if ( $(this).parent().parent().parent().parent().parent().hasClass("noresultsSrch") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc2") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSlc3") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsVagas")
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSuites")
+        || $(this).parent().parent().parent().parent().parent().hasClass("noresultsQuartos") ) {
+          console.log("temmmmm");
+
+      } else { 
         // /\ /\ /\ /\ /\ /\ /\ /\ /\ 
 
         $(this).parent().parent().parent().parent().parent().addClass("resultsSldr");
@@ -391,7 +400,13 @@ $(".slider").on("change", function() {
   } else if (priceImov < minValue || priceImov > maxValue) {
 
             // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).parent().parent().parent().parent().parent().hasClass("resultsSrch") || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc") || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc2") || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc3") || $(this).parent().parent().parent().parent().parent().hasClass("resultsVagas") || $(this).parent().parent().parent().parent().parent().hasClass("resultsSuites") || $(this).parent().parent().parent().parent().parent().hasClass("resultsQuartos") ) {
+      if ($(this).parent().parent().parent().parent().parent().hasClass("resultsSrch") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc2") 
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSlc3")
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsVagas")
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsSuites")
+        || $(this).parent().parent().parent().parent().parent().hasClass("resultsQuartos") ) {
             // /\ /\ /\ /\ /\ /\ /\ /\ /\
 
         $(this).parent().parent().parent().parent().parent().removeClass("resultsSrch");
