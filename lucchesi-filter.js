@@ -493,8 +493,4 @@ function classTest(){
     $(".errorText").css("display", "block");
   }
 }
-while (1 > 0) {
-  classTest();
-  console.log("oooi");
-}
 /////////////////////////////////////////////
