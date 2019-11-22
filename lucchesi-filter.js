@@ -377,6 +377,22 @@ $(".slider").on("change", function() {
   var maxValue = Number($("#maxRange").val());
   document.getElementById("maxvalueShow").innerHTML = maxValue;
   document.getElementById("minvalueShow").innerHTML = minValue;
+  var numMin = Number($("#minvalueShow").text()); 
+  var minprice = Intl.NumberFormat(`pt-BR`, {
+                                  style : 'currency',
+                                  currency: 'BRL',
+                                  currencyDisplay: `symbol`,
+                                  minimumFractionDigits: 2 });     
+  $("#minvalueShow").text(minprice.format(numMin));
+  
+  var numMax = Number($("#maxvalueShow").text()); 
+  var maxprice = Intl.NumberFormat(`pt-BR`, {
+                                  style : 'currency',
+                                  currency: 'BRL',
+                                  currencyDisplay: `symbol`,
+                                  minimumFractionDigits: 2 });     
+  $("#maxvalueShow").text(maxprice.format(numMax));
+
   console.log(minValue + " | " + maxValue);
   $(".divpriceH").each(function() {
     var priceImov = Number($(this).text());
@@ -390,7 +406,6 @@ $(".slider").on("change", function() {
         || $(this).parent().parent().parent().parent().parent().hasClass("noresultsVagas")
         || $(this).parent().parent().parent().parent().parent().hasClass("noresultsSuites")
         || $(this).parent().parent().parent().parent().parent().hasClass("noresultsQuartos") ) {
-          console.log("temmmmm");
 
       } else { 
         // /\ /\ /\ /\ /\ /\ /\ /\ /\ 
