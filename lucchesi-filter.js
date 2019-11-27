@@ -503,6 +503,7 @@ $(document).ready( function() {
 });
 
 $("#descSort").on("click", function() { 
+  console.log("dsc");
   var $wrapper = $(".ImovContainer");
   $wrapper.find('.imovitem').sort(function (a, b) {
     return +a.dataset.name - +b.dataset.name;
