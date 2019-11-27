@@ -504,14 +504,14 @@ $(document).ready( function() {
 });
 
 $("#descSort").on("click", function() { 
-  var $wrapper = $(".ImovContainer");
+  var $wrapper = $(".Imov-List");
   $wrapper.find('.imovitem').sort(function (a, b) {
     return +a.dataset.name - +b.dataset.name;
 })
 .appendTo( $wrapper ); });
 
 $("#ascSort").on("click", function() { 
-  var $wrapper = $(".ImovContainer");
+  var $wrapper = $(".Imov-List");
   $wrapper.find('.imovitem').sort(function (a, b) {
     return +b.dataset.name - +a.dataset.name;
 })
