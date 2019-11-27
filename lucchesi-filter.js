@@ -371,10 +371,30 @@ $(".vagasNum").on("keyup", function() {
 // RANGE SLIDER
 $(".slider").on("change", function() {
   classTest();
-  var minValue = Number($("#minRange").val());
-  var maxValue = Number($("#maxRange").val());
-  document.getElementById("maxvalueShow").innerHTML = maxValue;
-  document.getElementById("minvalueShow").innerHTML = minValue;
+  // var minValue = Number($("#minRange").val());
+  // var maxValue = Number($("#maxRange").val());
+  // document.getElementById("maxvalueShow").innerHTML = maxValue;
+  // document.getElementById("minvalueShow").innerHTML = minValue;
+
+        
+var slider1 = document.getElementById("minRange");
+var output1 = document.getElementById("minvalueShow");
+output.innerHTML = slider.value; // Display the default slider value
+
+//Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value; }
+  
+var slider2 = document.getElementById("maxRange");
+var output2 = document.getElementById("maxvalueShow");
+output.innerHTML = slider.value; // Display the default slider value
+
+//Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
   var numMin = Number($("#minvalueShow").text()); 
   var minprice = Intl.NumberFormat(`pt-BR`, {
                                   style : 'currency',
