@@ -497,22 +497,17 @@ function classTest() {
 
 $(document).ready( function() {
   $(".divpriceH").each( function() {
-    var priceImovTxt = $(this).text();
-    $(this).parent().parent().parent().parent().parent().attr("data-name", priceImovTxt);
+    var priceImovTxt = Number($(this).text());
+    $(this).parent().parent().parent().parent().parent().attr("data-price", priceImovTxt);
   });
 });
 
 $("#descSort").on("click", function() { 
-  var wrapper = $(".ImovContainer");
-  wrapper.find('.imovitem').sort(function (a, b) {
-    return +a.dataset.name - +b.dataset.name;
-    console.log($(".imovitem").attr("data-name") + " dsc");
-});
-.appendTo( wrapper ); });
+  var imovs = $('.imovitem');
+  imovs.sort(function(a, b){ return $(b).data("price") - $(a).data("price")});
+  $(".imovcontainer").html(imovs);});
 
 $("#ascSort").on("click", function() { 
-  var $wrapper = $(".ImovContainer");
-  $wrapper.find('.imovitem').sort(function (a, b) {
-    return +b.dataset.name - +a.dataset.name;
-});
-.appendTo( $wrapper ); });
+  var imovs = $('.imovitem');
+  imovs.sort(function(a, b){ return $(a).data("price") - $(b).data("price")});
+  $(".imovcontainer").html(imovs);});
