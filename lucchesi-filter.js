@@ -503,14 +503,16 @@ $(document).ready( function() {
 });
 
 $("#descSort").on("click", function() { 
-  $(this).addClass(".active");
+  $(this).addClass("active");
+  $("#ascSort").removeClass("active");
   var imovs = $('.imovitem');
   imovs.sort(function(a, b){ return $(b).data("price") - $(a).data("price")});
   $(".imovcontainer").html(imovs);
 });
 
 $("#ascSort").on("click", function() {
-  $(this).addClass(".active"); 
+  $(this).addClass("active"); 
+  $("#descSort").removeClass("active");
   var imovs = $('.imovitem');
   imovs.sort(function(a, b){ return $(a).data("price") - $(b).data("price")});
   $(".imovcontainer").html(imovs);
