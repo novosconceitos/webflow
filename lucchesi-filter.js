@@ -374,16 +374,16 @@ var output1 = document.getElementById("minvalueShow");
 output.innerHTML = slider.value; // Display the default slider value
 
 //Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value; }
+slider1.oninput = function() {
+  output1.innerHTML = this.value; }
   
 var slider2 = document.getElementById("maxRange");
 var output2 = document.getElementById("maxvalueShow");
 output.innerHTML = slider.value; // Display the default slider value
 
 //Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
+slider2.oninput = function() {
+ output2.innerHTML = this.value;
 }
 
 $(".slider").on("change", function() {
