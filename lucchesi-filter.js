@@ -503,14 +503,18 @@ $(document).ready( function() {
   });
 });
 
-var $wrapper = $(".ImovContainer");
-
-$("#descSort").on("click", function() { $wrapper.find('.imovitem').sort(function (a, b) {
+$("#descSort").on("click", function() { 
+  var $wrapper = $(".ImovContainer");
+  $wrapper.find('.imovitem').sort(function (a, b) {
     return +a.dataset.name - +b.dataset.name;
 })
 .appendTo( $wrapper ); });
 
-$("#ascSort").on("click", function() { $wrapper.find('.imovitem').sort(function (a, b) {
+$("#ascSort").on("click", function() { 
+  var $wrapper = $(".ImovContainer");
+  $wrapper.find('.imovitem').sort(function (a, b) {
     return +b.dataset.name - +a.dataset.name;
 })
 .appendTo( $wrapper ); });
+
+
