@@ -371,7 +371,7 @@ $(".vagasNum").on("keyup", function() {
 // RANGE SLIDER
 var slider1 = document.getElementById("minRange");
 var output1 = document.getElementById("minvalueShow");
-output.innerHTML = slider.value; // Display the default slider value
+output1.innerHTML = slider1.value; // Display the default slider value
 
 //Update the current slider value (each time you drag the slider handle)
 slider1.oninput = function() {
@@ -379,7 +379,7 @@ slider1.oninput = function() {
   
 var slider2 = document.getElementById("maxRange");
 var output2 = document.getElementById("maxvalueShow");
-output.innerHTML = slider.value; // Display the default slider value
+output2.innerHTML = slider2.value; // Display the default slider value
 
 //Update the current slider value (each time you drag the slider handle)
 slider2.oninput = function() {
