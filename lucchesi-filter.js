@@ -1,6 +1,5 @@
 //SEARCH
 $(".page-search").on("keyup", function() {
-  classTest();
   var v = $(this).val();                     // Nome dado ao valor desse filtro
   $(".imovitem").each(function() {
     if (v == ""){                            // 'Se' o valor for nulo removerá suas classes
@@ -507,6 +506,7 @@ $("#descSort").on("click", function() {
   var $wrapper = $(".Imov-List");
   $wrapper.find('.imovitem').sort(function (a, b) {
     return +a.dataset.name - +b.dataset.name;
+    console.log($(".imovitem").attr("data-name") + " dsc");
 })
 .appendTo( $wrapper ); });
 
