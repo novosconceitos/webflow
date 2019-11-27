@@ -503,7 +503,7 @@ $(document).ready( function() {
 });
 
 $("#descSort").on("click", function() { 
-  var $wrapper = $(".Imov-List");
+  var $wrapper = $(".ImovContainer");
   $wrapper.find('.imovitem').sort(function (a, b) {
     return +a.dataset.name - +b.dataset.name;
     console.log($(".imovitem").attr("data-name") + " dsc");
@@ -511,10 +511,8 @@ $("#descSort").on("click", function() {
 .appendTo( $wrapper ); });
 
 $("#ascSort").on("click", function() { 
-  var $wrapper = $(".Imov-List");
+  var $wrapper = $(".ImovContainer");
   $wrapper.find('.imovitem').sort(function (a, b) {
     return +b.dataset.name - +a.dataset.name;
 })
 .appendTo( $wrapper ); });
-
-
