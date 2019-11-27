@@ -369,29 +369,12 @@ $(".vagasNum").on("keyup", function() {
 });
 
 // RANGE SLIDER
-var slider1 = document.getElementById("minRange");
-var output1 = document.getElementById("minvalueShow");
-output1.innerHTML = slider1.value; // Display the default slider value
-
-//Update the current slider value (each time you drag the slider handle)
-slider1.oninput = function() {
-  output1.innerHTML = this.value; }
-  
-var slider2 = document.getElementById("maxRange");
-var output2 = document.getElementById("maxvalueShow");
-output2.innerHTML = slider2.value; // Display the default slider value
-
-//Update the current slider value (each time you drag the slider handle)
-slider2.oninput = function() {
- output2.innerHTML = this.value;
-}
-
 $(".slider").on("change", function() {
   classTest();
-  // var minValue = Number($("#minRange").val());
-  // var maxValue = Number($("#maxRange").val());
-  // document.getElementById("maxvalueShow").innerHTML = maxValue;
-  // document.getElementById("minvalueShow").innerHTML = minValue;
+  var minValue = Number($("#minRange").val());
+  var maxValue = Number($("#maxRange").val());
+  document.getElementById("maxvalueShow").innerHTML = maxValue;
+  document.getElementById("minvalueShow").innerHTML = minValue;
 
   var numMin = Number($("#minvalueShow").text()); 
   var minprice = Intl.NumberFormat(`pt-BR`, {
