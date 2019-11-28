@@ -1,18 +1,19 @@
 
 function errorText() {
-if ($(".imovitem").hasClass("noresultsSrch")    ||
-    $(".imovitem").hasClass("noresultsSldr")    ||
-    $(".imovitem").hasClass("noresultsSlc")     ||
-    $(".imovitem").hasClass("noresultsSlc2")    ||
-    $(".imovitem").hasClass("noresultsSlc3")    ||
-    $(".imovitem").hasClass("noresultsQuartos") ||
-    $(".imovitem").hasClass("noresultsVagas")   ||
-    $(".imovitem").hasClass("noresultsSuites")) {
-  document.getElementById("errorText").style.display = "block";
-}
-else {
-  document.getElementById("errorText").style.display = "none"; }
-}
+  if (!$(".imovitem").hasClass("resultsSrch")  ||
+    !$(".imovitem").hasClass("resultsSldr")    ||
+    !$(".imovitem").hasClass("resultsSlc")     ||
+    !$(".imovitem").hasClass("resultsSlc2")    ||
+    !$(".imovitem").hasClass("resultsSlc3")    ||
+    !$(".imovitem").hasClass("resultsQuartos") ||
+    !$(".imovitem").hasClass("resultsVagas")   ||
+    !$(".imovitem").hasClass("resultsSuites")) 
+  {
+    document.getElementById("errorText").style.display = "block";
+  }
+  else {
+    document.getElementById("errorText").style.display = "none"; }
+  }
 
 //SEARCH
 $(".page-search").on("keyup", function() {
