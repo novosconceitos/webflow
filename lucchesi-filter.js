@@ -12,7 +12,7 @@ if ($(".imovitem").hasClass("noresultsSrch")    ||
 }
 else {
   document.getElementById("errorText").style.display = "none"; }
-
+}
 
 //SEARCH
 $(".page-search").on("keyup", function() {
