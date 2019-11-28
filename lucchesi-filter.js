@@ -1,5 +1,11 @@
 //SEARCH
 $(".page-search").on("keyup", function() {
+  if (!$(".imovitem").hasClass("resultsSrch")) {
+  document.getElementById("errorText").style.display = "block";
+}
+else if ($(".imovitem").hasClass("resultsSrch")) {
+  document.getElementById("errorText").style.display = "none";
+}
   var v = $(this).val();                     // Nome dado ao valor desse filtro
   $(".imovitem").each(function() {
     if (v == ""){                            // 'Se' o valor for nulo removerá suas classes
@@ -451,12 +457,7 @@ $("#clearButton").on("click", function() {
 
 //NADA ENCONTRADO
 
-if (!$(".imovitem").hasClass("resultsSrch")) {
-  document.getElementById("errorText").style.display = "block";
-}
-else if ($(".imovitem").hasClass("resultsSrch")) {
-  document.getElementById("errorText").style.display = "none";
-}
+
 
 /////////////////////////////////////////////
 
