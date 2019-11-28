@@ -1,11 +1,22 @@
-//SEARCH
-$(".page-search").on("keyup", function() {
-  if (!$(".imovitem").hasClass("resultsSrch")) {
+
+function errorText() {
+if ($(".imovitem").hasClass("noresultsSrch")    ||
+    $(".imovitem").hasClass("noresultsSldr")    ||
+    $(".imovitem").hasClass("noresultsSlc")     ||
+    $(".imovitem").hasClass("noresultsSlc2")    ||
+    $(".imovitem").hasClass("noresultsSlc3")    ||
+    $(".imovitem").hasClass("noresultsQuartos") ||
+    $(".imovitem").hasClass("noresultsVagas")   ||
+    $(".imovitem").hasClass("noresultsSuites")  ||) {
   document.getElementById("errorText").style.display = "block";
 }
-else if ($(".imovitem").hasClass("resultsSrch")) {
-  document.getElementById("errorText").style.display = "none";
-}
+else {
+  document.getElementById("errorText").style.display = "none"; }
+
+
+//SEARCH
+$(".page-search").on("keyup", function() {
+  errorText();
   var v = $(this).val();                     // Nome dado ao valor desse filtro
   $(".imovitem").each(function() {
     if (v == ""){                            // 'Se' o valor for nulo removerá suas classes
@@ -53,7 +64,7 @@ else if ($(".imovitem").hasClass("resultsSrch")) {
 
 //STATUS (SLC1)
  $("#statusSlc").on("change", function() {
-  classTest();
+  errorText();
   var slc1 = $(this).val();
   $(".imovitem").each(function() {
     if (slc1 == ""){
@@ -99,7 +110,7 @@ else if ($(".imovitem").hasClass("resultsSrch")) {
 
 //NEGÓCIO (SLC2)
 $("#negocioSlc").on("change", function() {
-  classTest();
+  errorText();
   var slc2 = $(this).val();
   $(".imovitem").each(function() {
     if (slc2 == ""){
@@ -145,7 +156,7 @@ $("#negocioSlc").on("change", function() {
 
 //TIPO (SLC3)
 $("#tipoSlc").on("change", function() {
-  classTest();
+  errorText();
   var slc3 = $(this).val();
   $(".imovitem").each(function() {
     if (slc3 == ""){
@@ -191,7 +202,7 @@ $("#tipoSlc").on("change", function() {
 
 //QUARTOS
 $(".quartosNum").on("keyup", function() { 
-classTest(); 
+  errorText(); 
   var qpreNum = $(this).val();
   if (qpreNum == 1) { 
     var qName = " quarto";}
@@ -247,7 +258,7 @@ classTest();
 
 //SUÍTES
 $(".suitesNum").on("keyup", function() { 
-classTest(); 
+  errorText(); 
   var spreNum = $(this).val();
   if (spreNum == 1) { 
     var sName = " suíte";}
@@ -298,7 +309,7 @@ classTest();
 
 // VAGAS
 $(".vagasNum").on("keyup", function() {
-  classTest();
+  errorText();
   var vpreNum = $(this).val();
   if (vpreNum == 1) { 
     var vName = " vaga";}
@@ -349,7 +360,7 @@ $(".vagasNum").on("keyup", function() {
 
 // RANGE SLIDER
 $(".slider").on("change", function() {
-  classTest();
+  errorText();
   var minValue = Number($("#minRange").val());
   var maxValue = Number($("#maxRange").val());
   document.getElementById("maxvalueShow").innerHTML = maxValue;
@@ -454,9 +465,6 @@ $("#clearButton").on("click", function() {
   document.getElementById("maxvalueShow").innerHTML = "R$ 5.000.000,00";
   document.getElementById("minvalueShow").innerHTML = "R$ 0,00";
 });
-
-//NADA ENCONTRADO
-
 
 
 /////////////////////////////////////////////
