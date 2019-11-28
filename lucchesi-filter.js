@@ -454,7 +454,9 @@ $("#clearButton").on("click", function() {
 if (!$(".imovitem").hasClass("resultsSrch")) {
   document.getElementById("errorText").style.display = "block";
 }
-
+else if ($(".imovitem").hasClass("resultsSrch")) {
+  document.getElementById("errorText").style.display = "none";
+}
 
 /////////////////////////////////////////////
 
