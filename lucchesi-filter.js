@@ -7,7 +7,7 @@ if ($(".imovitem").hasClass("noresultsSrch")    ||
     $(".imovitem").hasClass("noresultsSlc3")    ||
     $(".imovitem").hasClass("noresultsQuartos") ||
     $(".imovitem").hasClass("noresultsVagas")   ||
-    $(".imovitem").hasClass("noresultsSuites")  ||) {
+    $(".imovitem").hasClass("noresultsSuites")) {
   document.getElementById("errorText").style.display = "block";
 }
 else {
