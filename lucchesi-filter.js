@@ -9,10 +9,10 @@ function errorText() {
     !$(".imovitem").hasClass("resultsVagas")   ||
     !$(".imovitem").hasClass("resultsSuites")) 
   {
-    document.getElementById("errorText").style.display = "block";
+    document.getElementById("errorText").style.display = "none";
   }
   else {
-    document.getElementById("errorText").style.display = "none"; }
+    document.getElementById("errorText").style.display = "block"; }
   }
 
 //SEARCH
