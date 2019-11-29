@@ -456,7 +456,7 @@ $("#clearButton").on("click", function() {
   $(".page-search").val("")
   $("#statusSlc").val("")
   $("#negocioSlc").val("")
-  $("#negocioSlc").val("")
+  $("#tipoSlc").val("")
   $(".quartosNum").val("")
   $(".suitesNum").val("")
   $(".vagasNum").val("")
