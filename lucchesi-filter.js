@@ -436,7 +436,6 @@ $(".slider").on("change", function() {
 //CLEAR FILTER
 $("#clearButton").on("click", function() {
   $(".imovitem").each(function() {
-    classTest();
     $(this).removeClass("resultsSrch");
     $(this).removeClass("resultsSlc");
     $(this).removeClass("resultsSlc2");
