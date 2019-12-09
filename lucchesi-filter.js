@@ -521,7 +521,6 @@ $("#clearButton").on("click", function() {
 /////////////////////////////////////////////
 
 $(document).ready( function() {
-  resetPag();
   testSize();
   $(".divpriceH").each( function() {
     var priceImovTxt = Number($(this).text());
