@@ -1,4 +1,34 @@
+//
+var containerH = $(".imov-list").height();
+var divH = $("#ImovDiv").height();
+var div = document.getElementById("ImovDiv");
+console.log(containerH);
+console.log(divH);
+var i = 1;
+function testSize() {
+	var divH = $("#ImovDiv").height();
+  console.log(divH);
+  var x = Math.ceil(divH / containerH);
+  console.log(x);
+  while(i <= x){
+  	var btn = document.createElement("div");
+    btn.innerHTML = i;
+    btn.className = "divpagnumber";
+    document.getElementById("DivPagControl").appendChild(btn);
+  	i++;
+  }
+	$(".divpagnumber").each(function() {
+		var indice = $(this).text();
+		$(this).on("click", function(){
+			var size = (indice - 1) * (0 - containerH) + "px";
+			div.style.top = size;
+  		console.log("size:" + size);
+		});
+	});
+}
+testSize();
 
+//
 function errorText() {
   if (!$(".imovitem").hasClass("resultsSrch")  ||
     !$(".imovitem").hasClass("resultsSldr")    ||
@@ -17,6 +47,7 @@ function errorText() {
 
 //SEARCH
 $(".page-search").on("keyup", function() {
+  testSize();
   errorText();
   var v = $(this).val();                     // Nome dado ao valor desse filtro
   $(".imovitem").each(function() {
@@ -65,6 +96,7 @@ $(".page-search").on("keyup", function() {
 
 //STATUS (SLC1)
  $("#statusSlc").on("change", function() {
+  testSize();
   errorText();
   var slc1 = $(this).val();
   $(".imovitem").each(function() {
@@ -111,6 +143,7 @@ $(".page-search").on("keyup", function() {
 
 //NEGÓCIO (SLC2)
 $("#negocioSlc").on("change", function() {
+  testSize();
   errorText();
   var slc2 = $(this).val();
   $(".imovitem").each(function() {
@@ -157,6 +190,7 @@ $("#negocioSlc").on("change", function() {
 
 //TIPO (SLC3)
 $("#tipoSlc").on("change", function() {
+  testSize();
   errorText();
   var slc3 = $(this).val();
   $(".imovitem").each(function() {
@@ -203,6 +237,7 @@ $("#tipoSlc").on("change", function() {
 
 //QUARTOS
 $(".quartosNum").on("keyup", function() { 
+  testSize();
   errorText(); 
   var qpreNum = $(this).val();
   if (qpreNum == 1) { 
@@ -259,6 +294,7 @@ $(".quartosNum").on("keyup", function() {
 
 //SUÍTES
 $(".suitesNum").on("keyup", function() { 
+  testSize();
   errorText(); 
   var spreNum = $(this).val();
   if (spreNum == 1) { 
@@ -310,6 +346,7 @@ $(".suitesNum").on("keyup", function() {
 
 // VAGAS
 $(".vagasNum").on("keyup", function() {
+  testSize();
   errorText();
   var vpreNum = $(this).val();
   if (vpreNum == 1) { 
@@ -361,6 +398,7 @@ $(".vagasNum").on("keyup", function() {
 
 // RANGE SLIDER
 $(".slider").on("change", function() {
+  testSize();
   errorText();
   var minValue = Number($("#minRange").val());
   var maxValue = Number($("#maxRange").val());
@@ -435,6 +473,7 @@ $(".slider").on("change", function() {
 
 //CLEAR FILTER
 $("#clearButton").on("click", function() {
+  testSize();
   $(".imovitem").each(function() {
     $(this).removeClass("resultsSrch");
     $(this).removeClass("resultsSlc");
@@ -470,6 +509,7 @@ $("#clearButton").on("click", function() {
 /////////////////////////////////////////////
 
 $(document).ready( function() {
+  testSize();
   $(".divpriceH").each( function() {
     var priceImovTxt = Number($(this).text());
     $(this).parent().parent().parent().parent().parent().attr("data-price", priceImovTxt);
