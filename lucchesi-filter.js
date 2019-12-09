@@ -12,7 +12,6 @@ function testSize() {
   console.log("divH: " + divH);
   var x = Math.ceil(divH / containerH);
   console.log(x);
-  i = 1;
   $(".divpagnumber").remove();
   div.style.top = 0;
   while(i <= x){
@@ -22,6 +21,7 @@ function testSize() {
     document.getElementById("DivPagControl").appendChild(btn);
   	i++;
   }
+  i = 1;
 	$(".divpagnumber").each(function() {
 		var indice = $(this).text();
 		$(this).on("click", function(){
@@ -31,7 +31,6 @@ function testSize() {
 		});
 	});
 }
-testSize();
 
 //
 function errorText() {
