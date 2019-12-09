@@ -27,6 +27,8 @@ function testSize() {
 		$(this).on("click", function(){
 			var size = (indice - 1) * (0 - containerH) + "px";
 			div.style.top = size;
+			$(this).addClass("active");
+			$(this).siblings(".divpagnumber").removeClass("active");
   		console.log("size:" + size);
 		});
 	});
