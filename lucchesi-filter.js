@@ -5,6 +5,9 @@ var div = document.getElementById("ImovDiv");
 console.log(containerH);
 console.log(divH);
 var i = 1;
+function resetPag(){
+	i = 1;
+}
 function testSize() {
 	var divH = $("#ImovDiv").height();
   console.log(divH);
@@ -47,6 +50,7 @@ function errorText() {
 
 //SEARCH
 $(".page-search").on("keyup", function() {
+  resetPag();
   testSize();
   errorText();
   var v = $(this).val();                     // Nome dado ao valor desse filtro
@@ -96,6 +100,7 @@ $(".page-search").on("keyup", function() {
 
 //STATUS (SLC1)
  $("#statusSlc").on("change", function() {
+  resetPag();
   testSize();
   errorText();
   var slc1 = $(this).val();
@@ -143,6 +148,7 @@ $(".page-search").on("keyup", function() {
 
 //NEGÓCIO (SLC2)
 $("#negocioSlc").on("change", function() {
+  resetPag();
   testSize();
   errorText();
   var slc2 = $(this).val();
@@ -190,6 +196,7 @@ $("#negocioSlc").on("change", function() {
 
 //TIPO (SLC3)
 $("#tipoSlc").on("change", function() {
+  resetPag();
   testSize();
   errorText();
   var slc3 = $(this).val();
@@ -237,6 +244,7 @@ $("#tipoSlc").on("change", function() {
 
 //QUARTOS
 $(".quartosNum").on("keyup", function() { 
+  resetPag();
   testSize();
   errorText(); 
   var qpreNum = $(this).val();
@@ -294,6 +302,7 @@ $(".quartosNum").on("keyup", function() {
 
 //SUÍTES
 $(".suitesNum").on("keyup", function() { 
+  resetPag();
   testSize();
   errorText(); 
   var spreNum = $(this).val();
@@ -346,6 +355,7 @@ $(".suitesNum").on("keyup", function() {
 
 // VAGAS
 $(".vagasNum").on("keyup", function() {
+  resetPag();
   testSize();
   errorText();
   var vpreNum = $(this).val();
@@ -398,6 +408,7 @@ $(".vagasNum").on("keyup", function() {
 
 // RANGE SLIDER
 $(".slider").on("change", function() {
+  resetPag();
   testSize();
   errorText();
   var minValue = Number($("#minRange").val());
@@ -473,6 +484,7 @@ $(".slider").on("change", function() {
 
 //CLEAR FILTER
 $("#clearButton").on("click", function() {
+  resetPag();
   testSize();
   $(".imovitem").each(function() {
     $(this).removeClass("resultsSrch");
@@ -509,6 +521,7 @@ $("#clearButton").on("click", function() {
 /////////////////////////////////////////////
 
 $(document).ready( function() {
+  resetPag();
   testSize();
   $(".divpriceH").each( function() {
     var priceImovTxt = Number($(this).text());
