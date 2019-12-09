@@ -51,8 +51,6 @@ function errorText() {
 
 //SEARCH
 $(".page-search").on("keyup", function() {
-  resetPag();
-  testSize();
   errorText();
   var v = $(this).val();                     // Nome dado ao valor desse filtro
   $(".imovitem").each(function() {
@@ -97,6 +95,7 @@ $(".page-search").on("keyup", function() {
      }
     }
   });
+  testSize();
 });
 
 //STATUS (SLC1)
