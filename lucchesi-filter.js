@@ -7,6 +7,8 @@ console.log(divH);
 var i = 1;
 function resetPag(){
 	i = 1;
+	$(".divpagnumber").remove();
+	div.style.top = 0 +"px";
 }
 function testSize() {
 	var divH = $("#ImovDiv").height();
