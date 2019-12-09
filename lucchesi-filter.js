@@ -9,7 +9,7 @@ function resetPag(){
 }
 function testSize() {
   var divH = $("#ImovDiv").height();
-  console.log(divH);
+  console.log("divH: " + divH);
   var x = Math.ceil(divH / containerH);
   console.log(x);
   i = 1;
