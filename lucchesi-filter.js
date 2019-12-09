@@ -5,16 +5,16 @@ var div = document.getElementById("ImovDiv");
 console.log(containerH);
 console.log(divH);
 var i = 1;
-function resetPag(){
-	i = 1;
-	$(".divpagnumber").remove();
-	div.style.top = 0 +"px";
+function resetPag(){	
 }
 function testSize() {
-	var divH = $("#ImovDiv").height();
+  var divH = $("#ImovDiv").height();
   console.log(divH);
   var x = Math.ceil(divH / containerH);
   console.log(x);
+  i = 1;
+  $(".divpagnumber").remove();
+  div.style.top = 0;
   while(i <= x){
   	var btn = document.createElement("div");
     btn.innerHTML = i;
