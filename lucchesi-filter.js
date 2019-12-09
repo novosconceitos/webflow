@@ -101,8 +101,6 @@ $(".page-search").on("keyup", function() {
 
 //STATUS (SLC1)
  $("#statusSlc").on("change", function() {
-  resetPag();
-  testSize();
   errorText();
   var slc1 = $(this).val();
   $(".imovitem").each(function() {
@@ -145,12 +143,11 @@ $(".page-search").on("keyup", function() {
         $(this).removeClass("resultsSlc"); }
     } 
   });
+  testSize();
 });
 
 //NEGÓCIO (SLC2)
 $("#negocioSlc").on("change", function() {
-  resetPag();
-  testSize();
   errorText();
   var slc2 = $(this).val();
   $(".imovitem").each(function() {
@@ -193,12 +190,11 @@ $("#negocioSlc").on("change", function() {
         $(this).removeClass("resultsSlc2"); }
     }
   });
+  testSize();
 });
 
 //TIPO (SLC3)
 $("#tipoSlc").on("change", function() {
-  resetPag();
-  testSize();
   errorText();
   var slc3 = $(this).val();
   $(".imovitem").each(function() {
@@ -241,12 +237,11 @@ $("#tipoSlc").on("change", function() {
         $(this).removeClass("resultsSlc3"); }
     }
   });
+  testSize();
 });
 
 //QUARTOS
 $(".quartosNum").on("keyup", function() { 
-  resetPag();
-  testSize();
   errorText(); 
   var qpreNum = $(this).val();
   if (qpreNum == 1) { 
@@ -299,12 +294,11 @@ $(".quartosNum").on("keyup", function() {
         $(this).removeClass("resultsQuartos"); }
     }
   });
+  testSize();
 });
 
 //SUÍTES
 $(".suitesNum").on("keyup", function() { 
-  resetPag();
-  testSize();
   errorText(); 
   var spreNum = $(this).val();
   if (spreNum == 1) { 
@@ -352,12 +346,11 @@ $(".suitesNum").on("keyup", function() {
         $(this).removeClass("resultsSuites"); }
     }
   });
+  testSize();
 });
 
 // VAGAS
 $(".vagasNum").on("keyup", function() {
-  resetPag();
-  testSize();
   errorText();
   var vpreNum = $(this).val();
   if (vpreNum == 1) { 
@@ -405,12 +398,11 @@ $(".vagasNum").on("keyup", function() {
         $(this).removeClass("resultsVagas"); }
     }
   });
+  testSize();
 });
 
 // RANGE SLIDER
 $(".slider").on("change", function() {
-  resetPag();
-  testSize();
   errorText();
   var minValue = Number($("#minRange").val());
   var maxValue = Number($("#maxRange").val());
@@ -479,14 +471,13 @@ $(".slider").on("change", function() {
      }
     }
   });
+  testSize();
 });
 /////////////////////////////////////////////
 
 
 //CLEAR FILTER
 $("#clearButton").on("click", function() {
-  resetPag();
-  testSize();
   $(".imovitem").each(function() {
     $(this).removeClass("resultsSrch");
     $(this).removeClass("resultsSlc");
@@ -516,6 +507,7 @@ $("#clearButton").on("click", function() {
   $("#maxRange").val("50000000")
   document.getElementById("maxvalueShow").innerHTML = "R$ 5.000.000,00";
   document.getElementById("minvalueShow").innerHTML = "R$ 0,00";
+  testSize();
 });
 
 
