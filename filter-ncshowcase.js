@@ -198,34 +198,34 @@ $(".slider").on("change", function() {
     if (priceImov >= minValue && priceImov <= maxValue) {
 
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ( $(this).parent().parent().parent().hasClass("noresultsSrch") 
-        || $(this).parent().parent().parent().hasClass("noresultsLetter") 
-        || $(this).parent().parent().parent().hasClass("noresultsSymbol")
-        || $(this).parent().parent().parent().hasClass("noresultsNumber") ) {
+      if ( $(this).parent().hasClass("noresultsSrch") 
+        || $(this).parent().hasClass("noresultsLetter") 
+        || $(this).parent().hasClass("noresultsSymbol")
+        || $(this).parent().hasClass("noresultsNumber") ) {
 
       } else { 
         // /\ /\ /\ /\ /\ /\ /\ /\ /\ 
 
-        $(this).parent().parent().parent().addClass("resultsSldr");
-        $(this).parent().parent().parent().removeClass("noresultsSldr");}
+        $(this).parent().addClass("resultsSldr");
+        $(this).parent().removeClass("noresultsSldr");}
   } else if (priceImov < minValue || priceImov > maxValue) {
 
             // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).parent().parent().parent().hasClass("resultsSrch") 
-        || $(this).parent().parent().parent().hasClass("resultsLetter") 
-        || $(this).parent().parent().parent().hasClass("resultsSymbol") 
-        || $(this).parent().parent().parent().hasClass("resultsNumber") ) {
+      if ($(this).parent().hasClass("resultsSrch") 
+        || $(this).parent().hasClass("resultsLetter") 
+        || $(this).parent().hasClass("resultsSymbol") 
+        || $(this).parent().hasClass("resultsNumber") ) {
             // /\ /\ /\ /\ /\ /\ /\ /\ /\
 
-        $(this).parent().parent().parent().removeClass("resultsSrch");
-        $(this).parent().parent().parent().removeClass("resultsLetter");
-        $(this).parent().parent().parent().removeClass("resultsSymbol");
-        $(this).parent().parent().parent().removeClass("resultsSldr");
-        $(this).parent().parent().parent().removeClass("resultsNumber");
-        $(this).parent().parent().parent().addClass("noresultsSldr");
+        $(this).parent().removeClass("resultsSrch");
+        $(this).parent().removeClass("resultsLetter");
+        $(this).parent().removeClass("resultsSymbol");
+        $(this).parent().removeClass("resultsSldr");
+        $(this).parent().removeClass("resultsNumber");
+        $(this).parent().addClass("noresultsSldr");
     } else {
-        $(this).parent().parent().parent().addClass("noresultsSldr");
-        $(this).parent().parent().parent().removeClass("resultsSldr");
+        $(this).parent().addClass("noresultsSldr");
+        $(this).parent().removeClass("resultsSldr");
      }
     }
   });
