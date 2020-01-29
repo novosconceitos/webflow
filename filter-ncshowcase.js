@@ -187,8 +187,8 @@ $(".slider").on("change", function() {
   
   var minValue = Number($("#minRange").val());
   var maxValue = Number($("#maxRange").val());
-  document.getElementById("maxvalueShow").innerHTML = maxValue;
-  document.getElementById("minvalueShow").innerHTML = minValue;
+  //document.getElementById("maxvalueShow").innerHTML = maxValue;
+  //document.getElementById("minvalueShow").innerHTML = minValue;
 
   var numMin = Number($("#minvalueShow").text()); 
   var numMax = Number($("#maxvalueShow").text()); 
