@@ -3,14 +3,14 @@ $(".page-search").on("keyup", function() {
   var v = $(this).val();                     // Nome dado ao valor desse filtro
   $(".filter-item").each(function() {
     if (v == ""){                            // 'Se' o valor for nulo removerá suas classes
-      $(this).removeClass("noresultsSrch");  
+      $(this).removeClass("noresultsSrch");
       $(this).removeClass("resultsSrch");}
     if (v != "" && $(this).text().search(new RegExp(v, 'gi')) != -1) {  // 'Se'o valor der "match"
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-       if ($(this).hasClass("noresultsLetter") 
+       if ($(this).hasClass("noresultsLetter")
        || $(this).hasClass("noresultsSymbol")
-       || $(this).hasClass("noresultsSldr") 
-       || $(this).hasClass("noresultsNumber") ) {} else { // E 'se' não houver outra classe atribuída  
+       || $(this).hasClass("noresultsSldr")
+       || $(this).hasClass("noresultsNumber") ) {} else { // E 'se' não houver outra classe atribuída
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
           $(this).addClass("resultsSrch"); // Então adicionará sua classe, permitindo a visibilidade
           $(this).removeClass("noresultsSrch");    // E removerá sua classe de invisibilidade
@@ -37,48 +37,45 @@ $(".page-search").on("keyup", function() {
   
 });
 
-//STATUS (SLC1)
+//Letras (SLC1)
  $("#letraSlc").on("change", function() {
   
   var slc1 = $(this).val();
-  $(".filter-item").each(function() {
+  $(".item-letter").each(function() {
     if (slc1 == ""){
-      $(this).removeClass("noresultsLetter");
-      $(this).removeClass("resultsLetter");}
+      $(this).parent().removeClass("noresultsLetter");
+      $(this).parent().removeClass("resultsLetter");}
     if (slc1 != "" && $(this).text().search(new RegExp(slc1, 'gi')) != -1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("noresultsSrch") 
-      || $(this).hasClass("noresultsSymbol") 
-      || $(this).hasClass("noresultsSldr")
-       
-      || $(this).hasClass("noresultsNumber") 
-      || $(this).hasClass("noresultsSuites") 
-      || $(this).hasClass("noresultsVagas") ) {} else {   
+      if ($(this).parent().hasClass("noresultsSrch") 
+      || $(this).parent().hasClass("noresultsSymbol") 
+      || $(this).parent().hasClass("noresultsSldr")
+      || $(this).parent().hasClass("noresultsNumber") ) {} else {   
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
-        $(this).addClass("resultsLetter");
-        $(this).removeClass("noresultsLetter");}
+        $(this).parent().addClass("resultsLetter");
+        $(this).parent().removeClass("noresultsLetter");}
   } else if (slc1 != "" && $(this).text().search(slc1) != 1) {
         // \/ \/ \/ \/ \/ \/ \/ \/ \/
-      if ($(this).hasClass("resultsSrch") 
-      || $(this).hasClass("resultsSymbol")
-      || $(this).hasClass("resultsSldr") 
-      || $(this).hasClass("resultsNumber")  ) {
+      if ($(this).parent().hasClass("resultsSrch") 
+      || $(this).parent().hasClass("resultsSymbol")
+      || $(this).parent().hasClass("resultsSldr") 
+      || $(this).parent().hasClass("resultsNumber")  ) {
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
-        $(this).removeClass("resultsSrch");
-        $(this).removeClass("resultsSldr");
-        $(this).removeClass("resultsLetter");
-        $(this).removeClass("resultsSymbol");
-        $(this).removeClass("resultsNumber");
-        $(this).addClass("noresultsLetter");
+        $(this).parent().removeClass("resultsSrch");
+        $(this).parent().removeClass("resultsSldr");
+        $(this).parent().removeClass("resultsLetter");
+        $(this).parent().removeClass("resultsSymbol");
+        $(this).parent().removeClass("resultsNumber");
+        $(this).parent().addClass("noresultsLetter");
     } else {
-        $(this).addClass("noresultsLetter");
-        $(this).removeClass("resultsLetter"); }
+        $(this).parent().addClass("noresultsLetter");
+        $(this).parent().removeClass("resultsLetter"); }
     } 
   });
   
 });
 
-//NEGÓCIO (SLC2)
+//Símbolo (SLC2)
 $("#symbolSlc").on("change", function() {
   
   var slc2 = $(this).val();
@@ -91,10 +88,7 @@ $("#symbolSlc").on("change", function() {
       if ($(this).hasClass("noresultsSrch") 
       || $(this).hasClass("noresultsLetter") 
       || $(this).hasClass("noresultsSldr")
-       
-      || $(this).hasClass("noresultsNumber") 
-      || $(this).hasClass("noresultsSuites") 
-      || $(this).hasClass("noresultsVagas") ) {} else {  
+      || $(this).hasClass("noresultsNumber")  ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
         $(this).addClass("resultsSymbol");
         $(this).removeClass("noresultsSymbol");}
@@ -125,7 +119,7 @@ $("#symbolSlc").on("change", function() {
   
 });
 
-//QUARTOS
+//Números
 $(".num").on("keyup", function() { 
    
   var qpreNum = $(this).val();
@@ -144,10 +138,7 @@ $(".num").on("keyup", function() {
       if ($(this).hasClass("noresultsSrch") 
       || $(this).hasClass("noresultsLetter") 
       || $(this).hasClass("noresultsSldr")
-      || $(this).hasClass("noresultsSymbol") 
-       
-      || $(this).hasClass("noresultsSuites") 
-      || $(this).hasClass("noresultsVagas") ) {} else {  
+      || $(this).hasClass("noresultsSymbol")  ) {} else {  
         // /\ /\ /\ /\ /\ /\ /\ /\ /\
 
         $(this).addClass("resultsNumber");
